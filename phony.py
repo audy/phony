@@ -9,6 +9,7 @@ import sys
 
 MAX = 1000000
 MAX_LENGTH = 8
+
 try:
     DICTIONARY = sys.argv[1]
 except:
@@ -34,7 +35,7 @@ def main():
         numbers = str(i)
         digits = dialpad.keys()
         hits = [ word for word in make_words(numbers, words, digits, dialpad) ] 
-        if len(hits)>10:
+        if len(hits)>1:
             print '%s: %s' % (numbers, ' '.join(hits))
 
 
